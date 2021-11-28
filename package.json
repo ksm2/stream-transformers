@@ -39,7 +39,7 @@
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.10",
     "jest": "^27.3.1",
-    "jest-stream-marbles": "^1.0.1",
+    "jest-stream-marbles": "^1.1.0",
     "prettier": "^2.5.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.7",
