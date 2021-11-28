@@ -1,6 +1,6 @@
 {
   "name": "stream-transformers",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "description": "Reusable stream transformers for WHATWG Streams similar to ReactiveX Operators",
   "main": "./lib/index.js",
   "type": "module",
