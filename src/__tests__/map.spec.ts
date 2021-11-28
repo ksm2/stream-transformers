@@ -9,10 +9,20 @@ describe("map", () => {
     await expect(act.pipeThrough(map((it) => it + 1))).toStream(exp);
   });
 
-  it("should fail the other stream", async () => {
+  it("should propagate an error through the stream", async () => {
     const act = marbles`---${1}-${2}--x`;
     const exp = marbles`---${2}-${3}--x`;
 
     await expect(act.pipeThrough(map((it) => it + 1))).toStream(exp);
+  });
+
+  it("should fail the other stream if the callback throws", async () => {
+    const cb = () => {
+      throw undefined;
+    };
+    const act = marbles`---${1}-${2}--|`;
+    const exp = marbles`---x`;
+
+    await expect(act.pipeThrough(map(cb))).toStream(exp);
   });
 });
