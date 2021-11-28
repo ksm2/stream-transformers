@@ -28,7 +28,7 @@ or
 
 ## Usage
 
-This module allows you to test [WHATWG Streams] with [Marble Syntax] in Jest.
+This module allows you to transform [WHATWG Streams] using different [operators](#operators).
 
 ```js
 import { ReadableStream } from "isomorphic-streams";
@@ -46,7 +46,9 @@ const stream = new ReadableStream({
   },
 });
 
-const output = stream.pipeThrough(map((it) => it * 2)).pipeThrough(filter((it) => it < 10));
+const output = stream
+  .pipeThrough(map((it) => it * 2))
+  .pipeThrough(filter((it) => it < 10));
 
 for await (const value of output) {
   console.dir(value);

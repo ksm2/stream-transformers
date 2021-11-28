@@ -49,7 +49,15 @@
   },
   "prettier": {
     "printWidth": 120,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "overrides": [
+      {
+        "files": ["*.md"],
+        "options": {
+          "printWidth": 80
+        }
+      }
+    ]
   },
   "files": [
     "lib",
