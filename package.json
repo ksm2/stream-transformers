@@ -1,0 +1,57 @@
+{
+  "name": "stream-transformers",
+  "version": "1.0.0-dev",
+  "description": "Reusable stream transformers for WHATWG Streams similar to ReactiveX Operators",
+  "main": "./lib/index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc --project tsconfig.build.json",
+    "prepack": "npm run clean && npm run build",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache",
+    "prettier": "prettier --check src/*.ts README.md CODE_OF_CONDUCT.md",
+    "prettier:fix": "prettier --write src/*.ts README.md CODE_OF_CONDUCT.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksm2/stream-transformers.git"
+  },
+  "keywords": [
+    "streams",
+    "web-streams",
+    "whatwg",
+    "jest",
+    "marbles"
+  ],
+  "author": {
+    "name": "Konstantin Möllers",
+    "email": "ksm.moellers@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksm2/stream-transformers/issues"
+  },
+  "homepage": "https://github.com/ksm2/stream-transformers#readme",
+  "dependencies": {
+    "isomorphic-streams": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.10",
+    "jest": "^27.3.1",
+    "jest-stream-marbles": "^1.0.1",
+    "prettier": "^2.5.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ]
+}
