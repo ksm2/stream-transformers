@@ -1,4 +1,3 @@
-import os from "node:os";
 import process from "node:process";
 import fs from "node:fs/promises";
 
@@ -22,12 +21,12 @@ for (const srcElement of await fs.readdir(srcDir)) {
     }
     const comment = content.slice(start + 3, end).split(/\r\n \*|[\r\n] \*/g);
 
-    const line = `- [**${operator}**](${operatorURL}) - ${comment[1]}`;
+    const line = `- [**${operator}**](${operatorURL}) - ${comment[1].trimStart()}`;
     operators.push(line);
   }
 }
 
-const readme = template.replace(placeholder, operators.join(os.EOL));
+const readme = template.replace(placeholder, operators.join("\n"));
 if (process.argv.includes("--check")) {
   const actual = await fs.readFile(readmeFilename, "utf-8");
   if (actual !== readme) {
