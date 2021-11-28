@@ -10,7 +10,9 @@
     "prepack": "npm run clean && npm run build",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache",
     "prettier": "prettier --check src/*.ts README.md CODE_OF_CONDUCT.md",
-    "prettier:fix": "prettier --write src/*.ts README.md CODE_OF_CONDUCT.md"
+    "prettier:fix": "prettier --write src/*.ts README.md CODE_OF_CONDUCT.md",
+    "readme": "node --loader ts-node/esm scripts/readme.ts --check",
+    "readme:fix": "node --loader ts-node/esm scripts/readme.ts --write"
   },
   "repository": {
     "type": "git",

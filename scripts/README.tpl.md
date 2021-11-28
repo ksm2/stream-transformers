@@ -55,14 +55,7 @@ for await (const value of output) {
 
 ## Operators
 
-- [**every**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/every.spec.ts) -  Determines whether every chunk of the stream fulfills a given predicate.
-- [**filter**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/filter.spec.ts) -  Filters chunks emitted by the stream using a predicate.
-- [**map**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/map.spec.ts) -  Maps each chunk emitted by the stream to another type using a callback.
-- [**reduce**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/reduce.spec.ts) -  Aggregates a stream to a value emitting the result when the stream closes.
-- [**reduce1**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/reduce1.spec.ts) -  Aggregates a stream to a value emitting the result when the stream closes.
-- [**scan**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/scan.spec.ts) -  Aggregates a stream to a value emitting the intermediate result with each chunk.
-- [**scan1**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/scan1.spec.ts) -  Aggregates a stream to a value emitting the intermediate result with each chunk.
-- [**some**](https://github.com/ksm2/stream-transformers/blob/main/src/__tests__/some.spec.ts) -  Determines whether some chunks of the stream fulfill a given predicate.
+<!-- OPERATORS -->
 
 ## Contributing
 
